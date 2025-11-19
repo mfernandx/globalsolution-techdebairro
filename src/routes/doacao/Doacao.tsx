@@ -1,9 +1,10 @@
 import Navegador from "../../components/Navegador";
 import Rodape from "../../components/Rodape";
 
-export default function Faq() {
+export default function Doacao() {
     return(
         <>
+
         <Navegador/>
 
         <header className="h-100 p-6 bg-[url('/background-page.png')] bg-cover ">
@@ -12,8 +13,9 @@ export default function Faq() {
             <h3 className='font-bold text-white mt-10 ml-10 text-2xl '>Bem-vindo ao portal do <span className='font-extrabold text-[#f6617f] '>TECH DE BAIRRO</span>.</h3>
             
         </header>
+        
+        <Rodape/>
 
-        <Rodape/> 
         </>
     )
 }

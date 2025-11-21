@@ -10,6 +10,7 @@ import Faq from './routes/faq/Faq.tsx'
 import Participantes from './routes/participantes/Participantes.tsx'
 import { Contato } from './routes/contato/Contato.tsx'
 import Doacao from './routes/doacao/Doacao.tsx'
+import FormularioDoacao from './routes/formulario-doacao/FormularioDoacao.tsx'
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path:"/doacao",
         element:<Doacao/>  
+      },
+      {
+        path:"/formulario-doacao",
+        element:<FormularioDoacao/>
       },
       {
         path:"/faq",

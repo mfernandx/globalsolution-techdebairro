@@ -7,7 +7,7 @@ import Cabecalho from "../../components/Cabecalho";
 
 type FormularioContato = {nomeUsuario:string;emailUsuario:string;observacao:string};
 
-export function Contato() {
+export default function Contato() {
 
     const {register,handleSubmit} = useForm <FormularioContato>();
     const [mensagem, setMensagem] = useState<string | null>(null);

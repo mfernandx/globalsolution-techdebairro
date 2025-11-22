@@ -11,6 +11,9 @@ import Participantes from './routes/participantes/Participantes.tsx'
 import Contato from './routes/contato/Contato.tsx'
 import Doacao from './routes/doacao/Doacao.tsx'
 import FormularioDoacao from './routes/formulario-doacao/FormularioDoacao.tsx'
+import Login from './routes/login/Login.tsx'
+import Cadastro from './routes/cadastro/Cadastro.tsx'
+import { AuthProvider } from './context/auth.tsx'
 
 const router = createBrowserRouter([
   {
@@ -45,6 +48,14 @@ const router = createBrowserRouter([
       {
         path:"/contato",
         element:<Contato/>
+      },
+      {
+        path:"/login",
+        element:<Login/>
+      },
+      {
+        path:"/cadastro",
+        element:<Cadastro/>
       }
     ]
   }
@@ -54,6 +65,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>,
 )

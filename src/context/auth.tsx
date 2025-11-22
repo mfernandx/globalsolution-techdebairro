@@ -1,6 +1,26 @@
 import {createContext, useEffect, useState} from "react"
 
-type Estudante = { nomeEstudante: string, cpf: string, grauEscolaridade: string, telefone: number,email: string, senha: string, cep: string, cidade: string, bairro: string, rua: string, numero: number, complemento: string};
+//type Estudante = { nomeEstudante: string, cpf: string, grauEscolaridade: string, telefone: number,email: string, senha: string, cep: string, cidade: string, bairro: string, rua: string, numero: number, complemento: string};
+
+type Endereco = {
+    cep: string;
+    cidade: string;
+    bairro: string;
+    rua: string;
+    numero: number;
+    complemento: string;
+};
+
+type Estudante = { 
+    id: number;
+    nomeEstudante: string;
+    cpf: string;
+    grauEscolaridade: string;
+    telefone: string;
+    email: string;
+    senha?: string; 
+    endereco: Endereco;
+};
 
 type AuthContextType = {
     estudante: Estudante | null,
@@ -80,10 +100,15 @@ export const AuthProvider = ({children}:AuthProviderProps)=>{
 
     try {
 
-        const response = await fetch(`http://localhost:8080/estudantes/login/${encodeURIComponent(email)}/${encodeURIComponent(senha)}`);
+        const response = await fetch("http://localhost:8080/estudantes/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, senha }),
+        });
+
+        const estudanteData = await response.json();
 
         if (response.ok) {
-            const estudanteData = await response.json();
             setEstudante(estudanteData);
             localStorage.setItem("estudante_data", JSON.stringify(estudanteData));
             return;

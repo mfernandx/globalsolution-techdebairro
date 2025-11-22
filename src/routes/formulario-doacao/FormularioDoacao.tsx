@@ -54,7 +54,7 @@ export default function FormularioDoacao() {
         <> 
         <section className="min-h-screen flex">
 
-            <section className="bg-[url('/background-page-2.png')] bg-cover bg-center w-2/4 flex flex-col justify-center items-center text-white"></section>
+            <section className="bg-[url('/gif-page.gif')] bg-cover bg-left w-2/4 flex flex-col justify-center items-center text-white"></section>
 
             <section className="w-2/4 min-h-screen flex flex-col justify-center items-center">
 

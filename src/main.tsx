@@ -14,6 +14,9 @@ import FormularioDoacao from './routes/formulario-doacao/FormularioDoacao.tsx'
 import Login from './routes/login/Login.tsx'
 import Cadastro from './routes/cadastro/Cadastro.tsx'
 import { AuthProvider } from './context/auth.tsx'
+import Informacoes from './routes/informacoes-aluno/Informacoes.tsx'
+import HomeAluno from './routes/home-aluno/HomeAluno.tsx'
+import Novidades from './routes/novidades/Novidades.tsx'
 
 const router = createBrowserRouter([
   {
@@ -56,6 +59,18 @@ const router = createBrowserRouter([
       {
         path:"/cadastro",
         element:<Cadastro/>
+      },
+      {
+        path:"/home-aluno",
+        element:<HomeAluno/>
+      },
+      {
+        path:"/informacoes-aluno",
+        element:<Informacoes/>
+      },
+      {
+        path:"/novidades",
+        element:<Novidades/>
       }
     ]
   }

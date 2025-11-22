@@ -28,7 +28,7 @@ export default function Navegador() {
                 border-b-transparent hover:border-b-10 hover:border-[#2000fc]" href="/participantes"> Sobre nós </a></li>
             </ul>
 
-            <a href="/login" className="  bg-[#f6617f] text-white font-bold px-4 py-2.5 rounded-full hover:bg-[#f74065] flex items-center"><img src={iconperfil}/>ÁREA DO ALUNO</a>
+            <a href="/login" className="  bg-[#f6617f] text-white font-bold px-4 py-2.5 rounded-full hover:bg-[#f74065] flex items-center"><img src={iconperfil}/>⠀ÁREA DO ALUNO</a>
         </nav>
         
         </>

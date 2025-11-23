@@ -85,12 +85,13 @@ export default function FormularioDoacao() {
                     <input className="w-full p-2 mb-2 border-2 border-gray-400 rounded-3xl bg-white" type="text" {...register("descricaoEstado", { required: true })}
                     placeholder=" Descrição do estado atual:" name="descricaoEstado" />
                     
+                    <p className={`mt-4 text-center font-medium ${tipoMensagem === "sucesso" ? "text-green-600" : "text-red-500"}`}>{mensagem}</p>
             
                     <button type="submit" className="block m-auto bg-[#f04f6f] hover:bg-[#f74065] py-2 px-14 mt-3 rounded-3xl text-white font-bold">ENVIAR</button>
                 
                 </form>
 
-                <p className={`mt-4 text-center font-medium ${tipoMensagem === "sucesso" ? "text-green-600" : "text-red-500"}`}>{mensagem}</p>
+                
 
             </section>
 

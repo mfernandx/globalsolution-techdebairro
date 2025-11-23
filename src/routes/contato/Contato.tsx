@@ -1,6 +1,6 @@
 import Navegador from "../../components/Navegador";
 import Rodape from "../../components/Rodape";
-import comunidade from '/cenario-comunidade.png'
+import logotipo from '/logotipo-techdebairro.png'
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import Cabecalho from "../../components/Cabecalho";
@@ -66,8 +66,8 @@ export default function Contato() {
         
             </section>   
         
-                <section className='block mt-12'>
-                    <img className="w-100"src={comunidade} />
+                <section className='block mt-30'>
+                    <img className="w-100"src={logotipo} />
                 </section>
         
         </section>
@@ -94,7 +94,7 @@ export default function Contato() {
                 </section>
 
             
-                <button type="submit" className="w-full bg-indigo-600 text-white py-2 px-4 rounded-3xl hover:bg-indigo-700 transition font-bold">ENVIAR</button>
+                <button type="submit" className="w-full bg-[#f04f6f] hover:bg-[#f74065] text-white py-2 px-4 rounded-3xl font-bold">ENVIAR</button>
 
             </form>
 

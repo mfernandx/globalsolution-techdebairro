@@ -28,6 +28,7 @@ type AuthContextType = {
     login: (email: string, senha: string) => Promise <string | void>,
     cadastro: (nomeEstudante: string, cpf: string, grauEscolaridade: string, telefone: number, email: string, senha: string,cep: string, cidade: string, bairro: string, rua: string, numero: number,complemento:string ) => Promise<string | void>; 
     logout: (email:string, senha: string)=> Promise <string | void>,
+    atualizarEndereco: (email: string,senha: string,cep: string,cidade: string,bairro: string,rua: string,numero: number,complemento:string) => Promise<string | void>;
 }
 
 type AuthProviderProps = {
@@ -129,34 +130,78 @@ export const AuthProvider = ({children}:AuthProviderProps)=>{
 
 
     const logout = async (email:string, senha:string): Promise <string | void> =>{
+
         try {
-            const response = await fetch(
-      `http://localhost:8080/estudantes/excluir/${encodeURIComponent(email)}/${encodeURIComponent(senha)}`,
-      {
-        method: "DELETE",
-      }
-    );
 
-    if (response.ok) {
-        localStorage.removeItem('estudante_data');
-        setEstudante(null);
-        return "Conta excluída com sucesso.";
+            const response = await fetch("http://localhost:8080/estudantes/excluir", {
+                method: "DELETE",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, senha }),
+            });
+
+            const text = await response.text();
+
+            if (response.ok) {
+                localStorage.removeItem('estudante_data');
+                setEstudante(null);
+                return "Conta excluída com sucesso.";
+            }
+
+            return text || "E-mail ou senha incorretos.";
         
-    }else if (response.status === 422 || response.status === 401) {
-        const text = await response.text();
-        return text || "E-mail ou senha incorretos.";
 
-    } else {
-        return "Erro ao excluir conta.";
-    }
         } catch (error) {
             console.error(error);
             return "Erro de comunicação com o servidor.";
         }
     }
 
+    const atualizarEndereco = async (email: string,senha: string,cep: string,cidade: string,bairro: string,rua: string,numero: number,complemento: string): Promise<string | void> => {
+
+    try {
+        const response = await fetch("http://localhost:8080/estudantes/atualizar", {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                email,
+                senha,
+                cep,
+                cidade,
+                bairro,
+                rua,
+                numero,
+                complemento
+            })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            // Atualiza estudante no estado
+            setEstudante((prev) => prev ? {
+                ...prev,
+                endereco: { cep, cidade, bairro, rua, numero, complemento }
+            } : null);
+
+            localStorage.setItem("estudante_data", JSON.stringify({
+                ...estudante,
+                endereco: { cep, cidade, bairro, rua, numero, complemento }
+            }));
+
+            return data.mensagem;
+        } else {
+            return data.erro;
+        }
+
+    } catch (e) {
+        console.error(e);
+        return "Erro ao comunicar com o servidor.";
+    }
+};
+
+
     return(
-        <AuthContext.Provider value={{estudante, signed: !!estudante, login, cadastro, logout}}>
+        <AuthContext.Provider value={{estudante, signed: !!estudante, login, cadastro, logout, atualizarEndereco}}>
             {children}
         </AuthContext.Provider>
     )

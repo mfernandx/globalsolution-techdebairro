@@ -43,7 +43,7 @@ export default function Doacao() {
 
         <section className="block">
 
-            <section className='flex justify-between bg-black p-8'> 
+            <section className='flex justify-between bg-black p-6'> 
 
                 <section className='block p-5 w-[400px]'>
                     <img className = 'justify-self-center' src={iconpassoum} />
@@ -64,7 +64,7 @@ export default function Doacao() {
                 </section>
 
             </section>
-            <section className='flex justify-between bg-black p-8'> 
+            <section className='flex justify-between bg-black p-6'> 
 
                 <section className='block p-5 w-[400px]'>
                     <img className = 'justify-self-center' src={iconpassoquatro} />

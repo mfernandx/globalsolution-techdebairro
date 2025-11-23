@@ -1,6 +1,6 @@
 import Navegador from "../../components/Navegador";
 import Rodape from "../../components/Rodape";
-import comunidade from '/cenario-comunidade.png'
+import transformacaosocial from '/transformacao-social.png'
 import alfabetizacaodigital from '/icon-alfabetizacao-digital.png'
 import economiacircular from '/icon-economia-circular.png'
 import inclusaodigital from '/icon-inclusao-digital.png'
@@ -37,7 +37,7 @@ export default function Funcionalidades() {
             </section>   
 
                 <section className='block mt-12'>
-                    <img className="w-100"src={comunidade} />
+                    <img className="w-100"src={transformacaosocial} />
                 </section>
 
         </section>

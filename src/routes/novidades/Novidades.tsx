@@ -1,16 +1,16 @@
 
-import Cabecalho from "../../components/Cabecalho";
 import NavegadorAluno from "../../components/NavegadorAluno";
 import Rodape from "../../components/Rodape";
 import segurancadigital from '/seguranca-digital.png'
 import uxwriting from '/ux-writing.png'
 import cidadaniadigital from '/cidadania-digital.png'
+import CabecalhoAluno from "../../components/CabecalhoAluno";
 
 export default function Novidades() {
     return(
         <>
         <NavegadorAluno/>
-        <Cabecalho/>
+        <CabecalhoAluno/>
 
         <section className='flex'>
 

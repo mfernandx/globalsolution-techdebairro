@@ -17,6 +17,7 @@ import { AuthProvider } from './context/auth.tsx'
 import Informacoes from './routes/informacoes-aluno/Informacoes.tsx'
 import HomeAluno from './routes/home-aluno/HomeAluno.tsx'
 import Novidades from './routes/novidades/Novidades.tsx'
+import FormularioAlteracao from './routes/formulario-alteracao/FormularioAlteracao.tsx'
 
 const router = createBrowserRouter([
   {
@@ -64,13 +65,18 @@ const router = createBrowserRouter([
         path:"/home-aluno",
         element:<HomeAluno/>
       },
+      
+      {
+        path:"/novidades",
+        element:<Novidades/>
+      },
       {
         path:"/informacoes-aluno",
         element:<Informacoes/>
       },
       {
-        path:"/novidades",
-        element:<Novidades/>
+        path:"/formulario-alteracao",
+        element:<FormularioAlteracao/>
       }
     ]
   }

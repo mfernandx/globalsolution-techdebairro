@@ -17,7 +17,7 @@ export default function Contato() {
         console.log("Dados do form:",dados);
 
         try {
-            const response = await fetch("http://localhost:8080/avaliacoes", {
+            const response = await fetch("https://techdebairro-java-api.onrender.com/avaliacoes", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ 

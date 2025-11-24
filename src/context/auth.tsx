@@ -67,7 +67,7 @@ export const AuthProvider = ({children}:AuthProviderProps)=>{
         ):  Promise < string | void> =>{
 
             try {
-                const response = await fetch("http://localhost:8080/estudantes", {
+                const response = await fetch("https://techdebairro-java-api.onrender.com/estudantes", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
@@ -101,7 +101,7 @@ export const AuthProvider = ({children}:AuthProviderProps)=>{
 
     try {
 
-        const response = await fetch("http://localhost:8080/estudantes/login", {
+        const response = await fetch("https://techdebairro-java-api.onrender.com/estudantes/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, senha }),
@@ -133,7 +133,7 @@ export const AuthProvider = ({children}:AuthProviderProps)=>{
 
         try {
 
-            const response = await fetch("http://localhost:8080/estudantes/excluir", {
+            const response = await fetch("https://techdebairro-java-api.onrender.com/estudantes/excluir", {
                 method: "DELETE",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, senha }),
@@ -159,7 +159,7 @@ export const AuthProvider = ({children}:AuthProviderProps)=>{
     const atualizarEndereco = async (email: string,senha: string,cep: string,cidade: string,bairro: string,rua: string,numero: number,complemento: string): Promise<string | void> => {
 
     try {
-        const response = await fetch("http://localhost:8080/estudantes/atualizar", {
+        const response = await fetch("https://techdebairro-java-api.onrender.com/estudantes/atualizar", {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

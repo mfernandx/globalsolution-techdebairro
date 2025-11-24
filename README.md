@@ -19,6 +19,9 @@ Giovana Souza Vieira - RM: 564430 - 1TDSPI
 
 Maria Fernanda Santos Mendes - RM: 565277 - 1TDSPI
 
+## STATUS DO PROJETO
+
+Concluído, porém em constante melhoria
 
 ## Ferramentas utilizadas
 
@@ -27,5 +30,42 @@ Maria Fernanda Santos Mendes - RM: 565277 - 1TDSPI
 - CSS
 - HookForms
 - React Router
+- Java+Quarkus+Maven
+- Feramentas de Deploy: Render e Vercel
 
 
+## Como usar
+
+Acessar o website pelo link:
+
+## Contato
+
+# Beatriz de Sousa Franco
+
+Turma: 1TDSPI
+RM: 563686
+Linkedin: https://www.linkedin.com/in/beatriz-franco-52970824a
+GitHub: https://github.com/biazxz
+
+# Giovana Souza Vieira
+
+Turma: 1TDSPI
+RM: 564430
+Linkedin: https://www.linkedin.com/in/giovana-souza-js
+GitHub: https://github.com/medusah25
+
+# Maria Fernanda Santos Mendes
+
+Turma: 1TDSPI
+RM: 565277
+Linkedin: https://www.linkedin.com/in/maria-fernanda-santos-mendes-39b151219/
+GitHub: https://github.com/mfernandx
+
+
+## Link do Repositório
+
+https://github.com/mfernandx/globalsolution-techdebairro.git
+
+
+
+## Link do Vídeo do Youtube 

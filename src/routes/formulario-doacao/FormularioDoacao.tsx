@@ -15,7 +15,7 @@ export default function FormularioDoacao() {
         console.log("Dados do form:",dados);
 
         try {
-            const response = await fetch("http://localhost:8080/doacoes", {
+            const response = await fetch("https://techdebairro-java-api.onrender.com/doacoes", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ 

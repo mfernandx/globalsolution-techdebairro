@@ -37,24 +37,25 @@ Concluído, porém em constante melhoria
 ## Como usar
 
 Acessar o website pelo link:
+https://globalsolution-techdebairro.vercel.app/
 
-## Contato
+# Contato
 
-# Beatriz de Sousa Franco
+## Beatriz de Sousa Franco
 
 Turma: 1TDSPI
 RM: 563686
 Linkedin: https://www.linkedin.com/in/beatriz-franco-52970824a
 GitHub: https://github.com/biazxz
 
-# Giovana Souza Vieira
+## Giovana Souza Vieira
 
 Turma: 1TDSPI
 RM: 564430
 Linkedin: https://www.linkedin.com/in/giovana-souza-js
 GitHub: https://github.com/medusah25
 
-# Maria Fernanda Santos Mendes
+## Maria Fernanda Santos Mendes
 
 Turma: 1TDSPI
 RM: 565277

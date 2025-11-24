@@ -72,3 +72,4 @@ https://github.com/mfernandx/globalsolution-techdebairro.git
 https://youtu.be/nMOXDW2XK4o?si=F0VYF-zCnU1tczHc
 
 ## Link do Repositório da API
+https://github.com/mfernandx/techdebairro-java-api.git

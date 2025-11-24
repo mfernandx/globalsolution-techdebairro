@@ -68,5 +68,7 @@ GitHub: https://github.com/mfernandx
 https://github.com/mfernandx/globalsolution-techdebairro.git
 
 
-
 ## Link do Vídeo do Youtube 
+https://youtu.be/nMOXDW2XK4o?si=F0VYF-zCnU1tczHc
+
+## Link do Repositório da API
